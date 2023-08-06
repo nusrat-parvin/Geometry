@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.1.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Blog</title>
+</head>
+<body>
+
+    <header>
+      <div class="navbar bg-base-100 lg:px-12 p-5 shadow-2xl">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </label>
+          </div>
+          <a class="btn btn-ghost normal-case text-3xl">Enrich Your Knowledge</a>
+        </div>
+        <div class="navbar-end">
+          <a href="index.html"><button class="btn btn-info text-white font-semibold text-lg">Geometry</button></a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="mx-10 grid md:grid-cols-2 lg:grid-cols-4 gap-10 mt-12">
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="/images/DOM.png" alt="DOM" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-left">
+            <h2 class="card-title">What is DOM and what is the purpose of DOM?</h2>
+            <p class="text-xl">Web documents include a programming interface called the Document Object Model (DOM).</p>
+            <h2 class="card-title text-left">What is the purpose of DOM?</h2>
+            <p class="text-xl">Purpose of the DOM is to represenet the page so that program can change document's structure, appearance, and content. Programming languages can communicate with a page by interacting with the nodes and objects that the DOM uses to describe the document.It is a representation of the web page that is object-oriented and can be changed using a scripting language like JavaScript.</p>
+          </div>
+        </div>
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="/images/dom_html.png" alt="dom_html" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-left">
+            <h2 class="card-title">How will you select HTML elements using DOM? Name the DOM methods.</h2>
+            <p class="text-xl">HTML elements can be selected using DOM selector. If we give any id or class name we can get the elements using
+              Dom seletor. We can also use tag name. Seletot names are given below:
+              1.getElementsByTagName()
+              2.getElementsByClassName()
+              3.getElementsById()
+              4.querySelector()
+              5.querySelectorAll()
+            </p>
+          </div>
+        </div>
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="/images/event_bubble.png" alt="event_bubble" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-left">
+            <h2 class="card-title">What is event bubble?</h2>
+            <p class="text-xl">The Document Object Model (DOM) has a concept known as Event Bubbling. It occurs when an element receives an event, and that event propagates up the DOM tree to the element's parent and ancestor elements until it reaches the root element.</p>
+          </div>
+        </div>
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="/images/pizza-call.png" alt="callBack_function" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-left">
+            <h2 class="card-title">What is a callback function and why will you use it?</h2>
+            <p class="text-xl">Sending a function as an argument to another function , is called CallBack function.<br>
+            Sometimes JavaScript's actions keep running untill the program is completed. So we use callBack function to execute code in response to a event such as click</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+</body>
+</html>

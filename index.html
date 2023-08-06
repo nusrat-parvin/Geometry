@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.1.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Geomatry</title>
+</head>
+<body>
+    <header>
+      <div class="navbar bg-base-100 lg:px-12 p-3 shadow-2xl">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </label>
+          </div>
+          <p class="text-3xl font-bold"><samp>Interactive<br><span class="text-xl font-normal">Geometry Genius</span></samp></p>
+          <!-- <a class="btn btn-ghost normal-case text-3xl">Interactive</a><br>
+          <p>Geometry Genius</p> -->
+          
+        </div>
+        <div class="navbar-end">
+          <a href="blog.html"><button class="btn btn-info text-white font-semibold text-lg">Blog</button></a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="flex flex-col md:flex-row lg:flex-row gap-3">
+        <div class="w-full grid md:grid-cols-2 lg:grid-cols-3 gap-4 px-2 mb-7">
+          <!-- CARD ONE -->
+          <div id="card_one">
+            <div id="card_one_color" class="card w-full bg-base-100 shadow-xl mt-12">
+              <figure class="px-10 pt-10">
+                <img src="/images/triangle.png" alt="Triangle" class="rounded-xl" />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title text-2xl font-bold">Triangle</h2>
+                <p>Area (A) = 0.5 * b * h</p>
+                <p><input type="text" class="w-24 h-7 bg-slate-200 rounded pl-1" placeholder="b"> cm <input type="text" class="w-24 h-7 bg-slate-200 rounded pl-1" placeholder="h"> cm</p>
+                <div class="card-actions">
+                  <button id="btn-triangle" class="btn bg-blue-500 btn-wide text-white font-semibold">Calculate</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- CARD TWO -->
+          <div id="card_two">
+            <div id="card_two_color" class="card w-full bg-base-100 shadow-xl mt-12">
+              <figure class="px-10 pt-10">
+                <img src="/images/rectangle.png" alt="Rectangle" class="rounded-xl" />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title text-2xl font-bold">Rectangle</h2>
+                <p>Area (A) = w * I</p>
+                <p><input type="text" class="w-24 h-7 bg-slate-200 rounded pl-1" placeholder="w"> cm <input type="text" class="w-24 h-7 bg-slate-200 rounded pl-1" placeholder="I"> cm</p>
+                <div class="card-actions">
+                  <button id="btn-rectangle" class="btn bg-blue-500 btn-wide text-white font-semibold">Calculate</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- CARD THREE -->
+          <div id="card_three">
+            <div id="card_three_color" class="card w-full bg-base-100 shadow-xl mt-12">
+              <figure class="px-10 pt-10">
+                <img src="/images/parallelogram.png" alt="Parallelogram" class="rounded-xl" />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 id="title-parallelogram" class="card-title text-2xl font-bold">Parallelogram</h2>
+                <p>Area (A) = b * h</p>
+                <p><input id="parallelo_input_one" type="text" class="w-24 h-7 bg-slate-200 rounded pl-1" placeholder="b"> cm <input id="parallelo_input_two" type="text" class="w-24 h-7 bg-slate-200 rounded pl-1" placeholder="h"> cm</p>
+                <div class="card-actions">
+                  <button id="btn-parallelogram" class="btn bg-blue-500 btn-wide text-white font-semibold">Calculate</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- CARD FOUR -->
+          <div id="card_four">
+            <div id="card_four_color" class="card w-full bg-base-100 shadow-xl mt-12">
+              <figure class="px-10 pt-10">
+                <img src="/images/rhombus.png" alt="Rhombus" class="rounded-xl" />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title text-2xl font-bold">Rhombus</h2>
+                <p>Area (A) = 0.5 * d<sub>1</sub> * d<sub>2</sub></p>
+                <p><input type="text" class="w-24 h-7 bg-slate-200 rounded pl-1" placeholder="d1"> cm <input type="text" class="w-24 h-7 bg-slate-200 rounded pl-1" placeholder="d2"> cm</p>
+                <div class="card-actions">
+                  <button id="btn-rhombus" class="btn bg-blue-500 btn-wide text-white font-semibold">Calculate</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- CARD FIVE -->
+          <div id="card_five">
+            <div id="card_five_color" class="card w-full bg-base-100 shadow-xl mt-12">
+              <figure class="px-10 pt-10">
+                <img src="/images/pentagon.png" alt="Pentagon" class="rounded-xl" />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title text-2xl font-bold">Pentagon</h2>
+                <p>Area (A) = 0.5 * p * b</p>
+                <p><input type="text" class="w-24 h-7 bg-slate-200 rounded pl-1" placeholder="p"> cm <input type="text" class="w-24 h-7 bg-slate-200 rounded pl-1" placeholder="b"> cm</p>
+                <div class="card-actions">
+                  <button id="btn-pentagon" class="btn bg-blue-500 btn-wide text-white font-semibold">Calculate</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- CARD SIX -->
+          <div id="card_six">
+            <div id="card_six_color" class="card w-full bg-base-100 shadow-xl mt-12">
+              <figure class="px-10 pt-10">
+                <img src="/images/ellipse.png" alt="Ellipse" class="rounded-xl" />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title text-2xl font-bold">Ellipse</h2>
+                <p>Area (A) = π * a * b</p>
+                <p><input type="text" class="w-24 h-7 bg-slate-200 rounded pl-1" placeholder="a"> cm <input type="text" class="w-24 h-7 bg-slate-200 rounded pl-1" placeholder="b"> cm</p>
+                <div class="card-actions">
+                  <button id="btn-ellipse" class="btn bg-blue-500 btn-wide text-white font-semibold">Calculate</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Area Calculate -->
+        <div id="second-div" class="w-full sm:w-full md:w-[25%] lg:w-[28%]">
+          <div class="card w-full bg-base-100 shadow-xl mt-12">
+            
+            <div class="card-body items-center text-center">
+              <h2 class="card-title text-2xl font-bold underline">Area Calculation</h2>
+              <!-- table -->
+              <div class="overflow-x-auto w-full">
+                <table class="table">
+                  <tbody id="table-body">
+                    <!-- row 1 -->
+                    <!-- <tr>
+                      <td>serial</td>
+                      <td>cardTitle</td>
+                      <td>area cm2</s></td>
+                      <td>
+                    </tr> -->
+                  </tbody>
+                </table>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- JS -->
+    <script src="random_color.js"></script>
+    <script src="utilities.js"></script>
+    <script src="area_calc.js"></script>
+    
+</body>
+</html>
+
